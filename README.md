@@ -1,5 +1,5 @@
 # Network Chaos Honey badger
-![logo](badger.png "logo")
+![logo](logo.png "logo")
 Chaos Honey badger randomly breaks link in a network. This will test the network resiliency
 and convergence times.
 
