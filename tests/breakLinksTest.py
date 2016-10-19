@@ -29,10 +29,11 @@ class BreakLinksTest(unittest.TestCase):
             (name, device) = (devices[randNum][0], devices[randNum][1])
             log.debug( 'Sleeping for %s seconds before breaking %s links' %(randTime, name))
             time.sleep(randTime)
-            device.sendCommandInteractive('conf t\n', '(config)#', False)
-            device.sendCommandInteractive('interface Eth1/25\n', '(config-if)#', False)
-            device.sendCommandInteractive('shut\n','(config-if)#', False)
-            device.sendCommandInteractive('no shut\n','(config-if)#', False)
+            device.sendCommandInteractive('conf t\n', '(config)#', True)
+            device.sendCommandInteractive('interface Eth1/25\n', '(config-if)#', True)
+            device.sendCommandInteractive('shut\n','(config-if)#', True)
+            time.sleep(10) 
+            device.sendCommandInteractive('no shut\n','(config-if)#', True)
 
         print 'Break Links'
 
